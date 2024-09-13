@@ -1,0 +1,8 @@
+$cursor-styles: auto, default, pointer, wait, text, move, help, not-allowed;
+
+
+@each $name in $cursor-styles {
+  .cursor-#{$name} {
+    cursor: $name;
+  }
+}

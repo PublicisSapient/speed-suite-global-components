@@ -1,0 +1,95 @@
+// Primary
+$primary-light: #2F76FF;
+$primary: #0B4BC8;
+$primary-dark: #083896;
+
+// Elevation
+$elevation-lvl-0: #F5F9FF;
+$elevation-lvl-1: #E5EEFF;
+$elevation-lvl-2: #DCE7FC;
+$elevation-lvl-3: #D5E2FB;
+$elevation-lvl-4: #CDDCF9;
+$elevation-lvl-5: #B3C7EE;
+
+// Neutral
+$black: #000000;
+$gray-700: #3F4551;
+$gray-600: #3F3F3F;
+$gray-500: #707070;
+$gray-400: #CCCCCC;
+$gray-300: #E8E8E8;
+$gray-200: #F2F2F2;
+$gray-100: #F5F5F5;
+$white: #FFFFFF;
+$grey: #797979;
+$grey-clicked: #202429;
+$grey-disabled: #CCD0D5;
+$grey-05: #EFF0F1;
+$grey-dark:#D5DBE1;
+$grey-10: #E6E8EA;
+// Alert
+$danger-light: #FF6B70;
+$danger: #FE414D;
+$danger-dark: #CC3340;
+$warning-light: #FFA233;
+$warning: #F68605;
+$warning-dark: #C45E04;
+$success-light: #4CE06C;
+$success: #15BA40;
+$success-dark: #0E8C2E;
+
+
+// Define the colors maps
+$utility: (
+        "transparent": transparent,
+);
+
+$colors-primary: (
+        "primary-light": $primary-light,
+        "primary": $primary,
+        "primary-dark": $primary-dark
+);
+
+$colors-elevation-lvl: (
+        "elevation-lvl-0": $elevation-lvl-0,
+        "elevation-lvl-1": $elevation-lvl-1,
+        "elevation-lvl-2": $elevation-lvl-2,
+        "elevation-lvl-3": $elevation-lvl-3,
+        "elevation-lvl-4": $elevation-lvl-4,
+        "elevation-lvl-5": $elevation-lvl-5
+);
+
+$colors-neutral: (
+        "black": $black,
+        "gray-700": $gray-700,
+        "gray-600": $gray-600,
+        "gray-500": $gray-500,
+        "gray-400": $gray-400,
+        "gray-300": $gray-300,
+        "gray-200": $gray-200,
+        "gray-100": $gray-100,
+        "white": $white,
+        "grey": $grey
+);
+
+$colors-alert: (
+        "danger-light": $danger-light,
+        "danger": $danger,
+        "danger-dark": $danger-dark,
+        "warning-light": $warning-light,
+        "warning": $warning,
+        "warning-dark": $warning-dark,
+        "success-light": $success-light,
+        "success": $success,
+        "success-dark": $success-dark,
+);
+
+$all-colors: map-merge($utility, $colors-primary);
+$all-colors: map-merge($all-colors, $colors-elevation-lvl);
+$all-colors: map-merge($all-colors, $colors-neutral);
+$all-colors: map-merge($all-colors, $colors-alert);
+
+@function get-all-colors() {
+  @return $all-colors;
+}
+

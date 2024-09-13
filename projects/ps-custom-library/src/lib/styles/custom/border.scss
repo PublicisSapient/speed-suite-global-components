@@ -1,0 +1,30 @@
+@use "../design-system/color";
+
+$utility: (
+        "transparent": transparent,
+        "none": none
+);
+
+.border { border-width: 1px; }
+.border-b { border-bottom-width: 1px; }
+.border-b-2 { border-bottom: 1px solid color.$gray-400; }
+
+.border-solid { border-style: solid; }
+.border-dashed { border-style: dashed; }
+.border-dotted { border-style: dotted; }
+.border-double { border-style: double; }
+.border-hidden { border-style: hidden; }
+.border-none { border-style: none; }
+
+.rounded-none { border-radius: 0; }
+.rounded-sm { border-radius: 2px; }
+.rounded { border-radius: 4px; }
+.rounded-md { border-radius: 6px; }
+.rounded-lg { border-radius: 8px; }
+.rounded-xl { border-radius: 10px; }
+.rounded-2xl { border-radius: 12px; }
+.rounded-3xl { border-radius: 14px; }
+.rounded-4xl { border-radius: 16px; }
+.rounded-1\/4 { border-radius: 25%; }
+.rounded-1\/2 { border-radius: 50%; }
+.rounded-full { border-radius: 100%; }

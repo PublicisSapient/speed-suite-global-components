@@ -1,0 +1,37 @@
+@use "../design-system/size";
+
+$utility: (
+        "auto": auto,
+);
+
+$size-and-utility: map-merge(size.$sizes, $utility);
+
+@each $name, $value in $size-and-utility {
+  .m-#{$name} {
+    margin: $value;
+  }
+  .mt-#{$name} {
+    margin-top: $value;
+  }
+  .mr-#{$name} {
+    margin-right: $value;
+  }
+  .mb-#{$name} {
+    margin-bottom: $value;
+  }
+  .ml-#{$name} {
+    margin-left: $value;
+  }
+  .-ml-#{$name} {
+    margin-left: -$value;
+  }
+  .mx-#{$name} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+  .my-#{$name} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+}
+

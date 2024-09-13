@@ -1,0 +1,67 @@
+@use "../design-system/size";
+@use "../design-system/color";
+
+.p-dialog {
+  border-radius: size.$size-6;
+  width: 50%;
+
+  @media (max-width: 1700px) { width: 70%; }
+
+  .p-dialog-header {
+    padding: 2rem 4rem;
+    border-top-left-radius: size.$size-6;
+    border-top-right-radius: size.$size-6;
+  }
+
+  .p-dialog-content {
+    padding: 0 2.5rem 2rem;
+
+    &:last-of-type {
+      border-bottom-left-radius: size.$size-6;
+      border-bottom-right-radius: size.$size-6;
+    }
+
+    .container {
+      padding: 0;
+    }
+  }
+
+  .p-dialog-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+
+    padding: 0 4rem 2rem;
+    border-bottom-left-radius: size.$size-6;
+    border-bottom-right-radius: size.$size-6;
+
+    button {
+      margin: 0;
+      padding: size.$size-3 size.$size-6;
+    }
+
+    .p-confirm-dialog-accept,
+    .p-confirm-dialog-reject {
+      .p-button-icon-left {
+        margin-right: 0;
+      }
+    }
+
+    .p-confirm-dialog-reject {
+      background-color: color.$white;
+      color: color.$primary;
+
+      &:enabled {
+        &:hover {
+          background-color: color.$elevation-lvl-1;
+          color: color.$primary;
+        }
+      }
+    }
+  }
+}
+
+.p-dialog.p-confirm-dialog .p-confirm-dialog-message {
+  margin-left: 1.75rem;
+}

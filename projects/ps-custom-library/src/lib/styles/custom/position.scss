@@ -1,0 +1,27 @@
+@use "../design-system/size";
+
+.fixed { position: fixed; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+
+@each $name, $value in size.$sizes {
+  .top-#{$name} {
+    top: $value;
+  }
+  .right-#{$name} {
+    right: $value;
+  }
+  .bottom-#{$name} {
+    bottom: $value;
+  }
+  .left-#{$name} {
+    left: $value;
+  }
+}
+
+.top-1\/2 { top: 50%; }
+.right-1\/2 { right: 50%; }
+.bottom-1\/2 { bottom: 50%; }
+.left-1\/2 { left: 50%; }
+
+

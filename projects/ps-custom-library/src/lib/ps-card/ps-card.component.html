@@ -1,0 +1,32 @@
+<p-card class="ap-custom-card">
+    <ng-template pTemplate="header">
+        {{cardInfo?.title}}
+    </ng-template>
+    <ng-template pTemplate="body" *ngIf="cardInfo.hasDescription">
+        {{cardInfo?.description}}
+    </ng-template>
+    <ng-template pTemplate="footer">
+        <div *ngFor="let btn of cardInfo?.ctaDetails?.list; index as i" class="inline-block" [ngClass]="{'pl-4 ml-4 border-l-2 border-gray-300':i > 0}">
+            <button pButton
+            type="button"
+            label="{{btn.name}}" (click)="cardCtaClick($event, cardInfo)"></button>
+        </div>
+    </ng-template>
+</p-card>
+<!-- <div class="w-full">
+    <p-card class="ap-custom-card">
+        <ng-template pTemplate="header">
+            Title
+        </ng-template>
+        <ng-template pTemplate="body">
+            cardInfo
+        </ng-template>
+        <ng-template pTemplate="footer">
+            <div class="inline-block pl-4 ml-4 border-l-2 border-gray-300">
+                <button pButton
+                type="button"
+                label="Action"></button>
+            </div>
+        </ng-template>
+    </p-card>
+</div> -->

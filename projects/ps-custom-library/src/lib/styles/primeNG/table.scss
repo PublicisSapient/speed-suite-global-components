@@ -1,0 +1,13 @@
+@use "../design-system/color";
+
+.p-datatable .p-datatable-thead > tr > th {
+  background-color: color.$gray-300;
+
+  &:first-of-type {
+    border-top-left-radius: 1rem;
+  }
+
+  &:last-of-type {
+    border-top-right-radius: 1rem;
+  }
+}

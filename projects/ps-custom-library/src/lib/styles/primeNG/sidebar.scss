@@ -1,0 +1,22 @@
+@use "../design-system/size";
+
+.p-sidebar {
+  padding: 0 size.$size-8;
+  border-top-left-radius: size.$size-4;
+  border-bottom-left-radius: size.$size-4;
+
+  .p-sidebar-header + .p-sidebar-content {
+    padding: 1rem 0 0 0;
+  }
+
+  .p-sidebar {
+    &-header {
+      border-bottom: 1px solid gray;
+      padding: size.$size-2 size.$size-4;
+    }
+
+    &-content {
+      padding: 0;
+    }
+  }
+}

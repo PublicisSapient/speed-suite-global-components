@@ -1,0 +1,44 @@
+@use "../design-system/color";
+@use "../design-system/typography";
+@use "../design-system/size";
+
+.dts-guided-tour {
+  .guided-tour-user-input-mask {
+    z-index: 1105;
+  }
+
+  .guided-tour-spotlight-overlay {
+    box-shadow: none;
+    border: 2px solid color.$danger;
+    border-radius: size.$size-3;
+    z-index: 1105;
+  }
+
+  .tour-block {
+    border-radius: size.$size-3;
+  }
+
+  .tour-step {
+    z-index: 1105;
+
+    .tour-buttons {
+      button {
+        font-family: typography.$font-family-primary;
+
+        &.next-button {
+          background-color: color.$primary;
+          border-radius: size.$size-3;
+        }
+
+        &.back-button {
+          color: color.$primary;
+        }
+      }
+    }
+  }
+}
+
+button.dts-guided-tour-button {
+  float: right;
+  margin-top: 2.5%;
+}

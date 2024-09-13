@@ -1,0 +1,12 @@
+@use '../design-system/size';
+
+.ql-toolbar.ql-snow {
+  border-top-right-radius: size.$size-3;
+  border-top-left-radius: size.$size-3;
+}
+
+.ql-container.ql-snow {
+  height: 125px;
+  border-bottom-left-radius: size.$size-3;
+  border-bottom-right-radius: size.$size-3;
+}

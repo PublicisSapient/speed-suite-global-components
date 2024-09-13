@@ -1,0 +1,5 @@
+@use "../design-system/typography";
+
+.pi {
+  font-size: typography.$font-size-primary;
+}

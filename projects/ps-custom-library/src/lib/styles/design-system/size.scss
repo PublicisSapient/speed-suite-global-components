@@ -1,0 +1,73 @@
+$size-px: 1px;
+$size-0: 0;           // 0px
+$size-1: 0.25rem;     // 4px
+$size-2: 0.5rem;      // 8px
+$size-3: 0.75rem;     // 12px
+$size-4: 1rem;        // 16px
+$size-5: 1.25rem;     // 20px
+$size-6: 1.5rem;      // 24px
+$size-7: 1.75rem;     // 28px
+$size-8: 2rem;        // 32px
+$size-9: 2.25rem;     // 36px
+$size-10: 2.5rem;     // 40px
+$size-11: 2.75rem;    // 44px
+$size-12: 3rem;       // 48px
+$size-14: 3.5rem;     // 56px
+$size-15: 3.75rem;    // 60px
+$size-24: 6rem;       // 96px
+$size-32: 8rem;       // 128px
+$size-36: 9rem;       // 144px
+$size-40: 10rem;      // 160px
+$size-44: 11rem;      // 176px
+
+$size-3xs: 224px;
+$size-2xs: 324px;
+$size-xs: 452px;
+$size-sm: 684px;
+$size-md: 768px;
+$size-lg: 916px;
+$size-xl: 1280px;
+$size-2xl: 1536px;
+
+$sizes: (
+        "px": $size-px,
+        "0": $size-0,
+        "1": $size-1,
+        "2": $size-2,
+        "3": $size-3,
+        "4": $size-4,
+        "5": $size-5,
+        "6": $size-6,
+        "7": $size-7,
+        "8": $size-8,
+        "9": $size-9,
+        "10": $size-10,
+        "11": $size-11,
+        "12": $size-12,
+        "14": $size-14,
+        "15": $size-15,
+        "24": $size-24,
+        "32": $size-32,
+        "36": $size-36,
+        "40": $size-40,
+        "44": $size-44
+);
+
+$screen-sizes: (
+        "3xs": $size-3xs,
+        "2xs": $size-2xs,
+        "xs": $size-xs,
+        "sm": $size-sm,
+        "md": $size-md,
+        "lg": $size-lg,
+        "xl": $size-xl,
+        "2xl": $size-2xl,
+);
+
+@function get-screen-size() {
+  @return $screen-sizes;
+}
+
+@function get-all-sizes() {
+  @return map-merge($sizes, $screen-sizes);
+}

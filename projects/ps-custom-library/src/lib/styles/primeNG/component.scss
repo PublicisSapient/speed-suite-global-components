@@ -1,0 +1,6 @@
+@use "../design-system/typography";
+
+.p-component {
+  font-family: 'Poppins', sans-serif;
+  font-size: typography.$font-size-primary;
+}

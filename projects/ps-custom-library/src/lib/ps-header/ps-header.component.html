@@ -1,0 +1,42 @@
+<header class="py-4 px-6" id="header">
+	<div class="h-8">
+		<div class="flex flex-row h-full">
+			<div class="flex w-1/2">
+				<div [ngClass]="showElement ? 'show-switch' : 'hide-switch'" class="relative switch-apps">
+					<div (click)="showSwitch = !showSwitch" class="switch-app-icon cursor-pointer h-full">
+						<img alt="switch-icon" class="h-full cursor-pointer" [src]="pSSwitchIcon">
+					</div>
+					<ul class="absolute max-w-md list-none list-inside rounded mt-6 block bg-white border z-10 py-3 switch-dropdown w-44" [ngClass]="showSwitch && showElement? 'block':'hidden'">
+						<li class="flex flex-row bg-white cursor-pointer pb-3" *ngFor="let item of platformSwitchItems; index as i">
+							<div (click)="navigateTo(item?.event)" class="switch-item flex" [ngClass]="{'active': i === 0}">
+								<span class="w-3/4 font-normal md:font-medium lg:font-medium pr-3">{{item?.label}}</span>
+								<span class="tick-icon w-1/4 text-right font-bold">&#10003;</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="h-full pl-3">
+					<img class="h-full" [src]="pSLogoInfo.imageUrl" [alt]="pSLogoInfo?.altText">
+				</div>
+				<div class="h-full w-px ml-3 bg-gray-700"></div>
+				<div class="h-full pl-3">
+					<img class="h-full cursor-pointer" [alt]="platformLogoInfo?.altText" [src]="platformLogoInfo?.imageUrl" (click)="onPlatformLogoClick($event)">
+				</div>
+			</div>
+			<div class="w-1/2 justify-end flex">
+				<div class="header-messages h-full pl-3 flex items-center" *ngIf="showHeaderMessages">
+					<ng-content select="[messages]"></ng-content>
+				</div>
+				<div class="header-comments h-full pl-3 flex items-center" *ngIf="showHeaderComments">
+					<ng-content select="[comments]"></ng-content>
+				</div>
+				<div class="header-notifications h-full pl-3 flex items-center" *ngIf="showHeaderNotifications">
+					<ng-content select="[notifications]"></ng-content>
+				</div>
+				<div class="header-userdetails h-full pl-3">
+					<ng-content select="[userDetails]"></ng-content>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

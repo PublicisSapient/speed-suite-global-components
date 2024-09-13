@@ -1,0 +1,27 @@
+@use "../design-system/typography";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+@each $name, $weight in typography.$font-weights {
+  .font-#{$name} {
+    font-weight: $weight;
+  }
+}
+
+@each $name, $size in typography.$font-sizes {
+  .text-#{$name} {
+    font-size: $size;
+  }
+}
+
+@each $white-space in typography.$white-spaces {
+  .whitespace-#{$white-space} {
+    white-space: $white-space;
+  }
+}
+
+@each $name, $word-break in typography.$word-breaks {
+  .break-#{$name} {
+    word-break: $word-break;
+  }
+}

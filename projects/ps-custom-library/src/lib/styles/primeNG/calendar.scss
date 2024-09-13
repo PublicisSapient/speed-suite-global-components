@@ -1,0 +1,22 @@
+@use "../design-system/size";
+@use "../design-system/typography";
+
+.p-calendar-w-btn .p-datepicker-trigger {
+  border-top-right-radius: size.$size-2;
+  border-bottom-right-radius: size.$size-2;
+  padding: 0;
+}
+
+.p-datepicker {
+  table {
+    font-size: typography.$font-size-primary;
+
+    td {
+      padding: 0;
+    }
+  }
+
+  .p-timepicker span {
+    font-size: typography.$font-size-primary;
+  }
+}

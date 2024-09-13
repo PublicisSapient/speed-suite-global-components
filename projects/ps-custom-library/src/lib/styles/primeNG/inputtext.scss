@@ -1,0 +1,15 @@
+@use "../design-system/size";
+@use "../design-system/typography";
+
+.p-input-icon-left > i:first-of-type {
+  top: 50%;
+  left: 1rem;
+  transform: translateY(25%);
+}
+
+.p-inputtext {
+  border-radius: size.$size-2;
+  padding: size.$size-2 size.$size-4;
+  font-family: typography.$font-family-primary;
+  font-size: typography.$font-size-primary;
+}

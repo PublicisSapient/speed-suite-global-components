@@ -1,0 +1,13 @@
+@use '../design-system/color';
+
+@each $name, $color in color.$all-colors {
+  .bg-#{$name} {
+    background-color: $color;
+  }
+  .text-#{$name} {
+    color: $color;
+  }
+  .border-#{$name} {
+    border-color: $color;
+  }
+}

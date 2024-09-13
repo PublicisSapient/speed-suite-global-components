@@ -1,0 +1,14 @@
+@use 'color';
+@use 'size';
+
+:root {
+  $all-colors: color.get-all-colors();
+  @each $name, $color in $all-colors {
+    --dts-color-#{$name}: #{$color};
+  }
+
+  $screen-size: size.get-screen-size();
+  @each $name, $size in $screen-size {
+    --dts-screen-size-#{$name}: #{$size};
+  }
+}

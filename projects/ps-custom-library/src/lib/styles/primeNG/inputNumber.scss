@@ -1,0 +1,20 @@
+.p-inputnumber-buttons-horizontal .p-inputnumber-input {
+  width: 3rem;
+
+  &:enabled,
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.p-inputnumber {
+  input {
+    padding: 0.25rem 0.5rem;
+
+  }
+}
+
+ p-inputnumber > span > button.p-element.p-inputnumber-button {
+   padding: 0.25rem 0.125rem;
+ }
+

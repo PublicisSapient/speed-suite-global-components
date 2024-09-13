@@ -1,0 +1,16 @@
+<div class="w-full flex flex-row">
+    <div class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center text-primary">
+        <span>{{ userBadgeName }}</span>
+    </div>
+    <div class="flex items-center pl-2">
+        <span>{{ userName }}</span>
+    </div>
+    <button pButton type="button"
+            (click)="menu.toggle($event)"
+            icon="pi pi-chevron-down"
+            class="dts-hamburger-button"
+    ></button>
+    <div class="ap-custom-menu">
+        <p-menu #menu [popup]="true" [model]="items"></p-menu>
+    </div>
+</div>

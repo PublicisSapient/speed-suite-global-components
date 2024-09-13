@@ -1,0 +1,171 @@
+@use "design-system/typography";
+// PrimeNG:
+@import '~primeicons/primeicons.css';
+@import '~primeng/resources/themes/md-light-indigo/theme.css';
+@import '~primeng/resources/primeng.min.css';
+// PrimeNG components:
+@import "primeNG/button";
+@import "primeNG/calendar";
+@import "primeNG/card";
+@import "primeNG/component";
+@import "primeNG/dialog";
+@import "primeNG/inputNumber";
+@import "primeNG/inputtext";
+@import "primeNG/pi";
+@import "primeNG/progressBar";
+@import "primeNG/selectButton";
+@import "primeNG/sidebar";
+@import "primeNG/table";
+@import "primeNG/toast";
+
+// Custom classes
+@import "custom/border";
+@import "custom/color-classes";
+@import "custom/cursor";
+@import "custom/display";
+@import "custom/filter";
+@import "custom/flex";
+@import "custom/form";
+@import "custom/height";
+@import "custom/margin";
+@import "custom/ngx-guided-tour";
+@import "custom/overflow";
+@import "custom/padding";
+@import "custom/position";
+@import "custom/quill-editor";
+@import "custom/text-align";
+@import "custom/translate";
+@import "custom/typography-classes";
+@import "custom/user-select";
+@import "custom/width";
+@import "design-system/color";
+@import "design-system/css-variables";
+@import "design-system/size";
+body {
+  margin: 0;
+  background-color: $white;
+  font-family: typography.$font-family-primary;
+  font-size: typography.$font-size-primary;
+}
+
+h2 {
+  font-weight: typography.$font-weight-medium;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px !important;
+    height: 5px !important;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(52, 58, 64, 0.6) !important;
+    border-radius: .2rem !important;
+    position: absolute;
+    right: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(52, 58, 64, 0.4) !important;
+}
+.ap-custom-menu{
+  .p-menu {
+    .p-menu-list{
+      .p-menuitem{
+        padding: 0 6px 0 6px;
+        .p-menuitem-link{
+          border-radius: $size-2;
+          &.p-menuitem-link-active, &:hover {
+            background: $primary;
+            .p-menuitem-icon, .p-menuitem-text{
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.p-tooltip{
+  &.p-tooltip-bottom{
+    &.ap-primary-tooltip{
+      border: 1px solid $grey-clicked;
+      border-radius: $size-2;
+      max-width: 100% !important;
+      background:  $black;
+      padding: 0;
+      .p-tooltip-arrow {
+        display: block !important;
+        border-width: 0 0.7em 0.7em;
+        top: 0px;
+        margin-top: -7px;
+        border-bottom-color: $grey-clicked;
+        left: 50%;
+      }
+      .p-tooltip-text {
+        background: $grey-clicked;
+        color: $grey-10;
+        font-size: 10px;
+      }
+    }
+  }
+}
+.ap-custom-primary-tabs{
+  .p-tabmenu{
+    .p-tabmenu-nav{
+        border-width: 0;
+        background: transparent;
+        .p-tabmenu-ink-bar{
+          display: none;
+        }
+        .p-tabmenuitem{
+          padding: 14px 14px 0 14px;
+          .p-menuitem-link{
+            border: 0;
+            background: transparent;
+            padding: 0 0 14px 0;
+            &:not(.p-disabled):focus {
+                background: transparent;
+            }
+            &:hover{
+              .p-menuitem-link {
+                background: transparent;
+                color: $primary;
+                border-bottom: 2px solid $primary;
+              }
+            }
+          }
+          &.p-highlight{
+            .p-menuitem-link {
+                // padding: 16px 0;
+                color: $primary;
+                border-bottom: 2px solid $primary;
+            }
+          }
+          &:not(.p-highlight){
+              &:not(.p-disabled){
+                  &:hover {
+                      .p-menuitem-link{
+                          background: transparent;
+                          border: 0;
+                          color: $black;
+                      }
+                  }
+              }
+
+          }
+        }
+    }
+  }
+}

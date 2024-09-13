@@ -1,0 +1,17 @@
+@use "../design-system/color";
+
+.p-progressbar {
+  height: 0.5rem;
+
+  .p-progressbar-value {
+    background: color.$primary;
+  }
+}
+
+.dts-timer-warning > .p-progressbar .p-progressbar-value {
+    background: color.$warning;
+}
+
+.dts-timer-danger > .p-progressbar .p-progressbar-value {
+  background: color.$danger;
+}

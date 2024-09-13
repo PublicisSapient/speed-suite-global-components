@@ -1,0 +1,65 @@
+@use '../design-system/size';
+
+$directions: (
+        "row": row,
+        "col": column,
+        "row-reverse": row-reverse,
+        "col-reverse": column-reverse
+);
+$alignments: center, start, end, stretch, baseline;
+$justifications: (
+        "center": center,
+        "start": start,
+        "end": end,
+        "between": space-between,
+        "around": space-around
+);
+
+$wraps: (wrap, wrap-reverse, nowrap);
+
+.flex {
+  display: flex;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.grow-0 {
+  flex-grow: 0;
+}
+
+
+@each $wrap in $wraps {
+  .flex-#{$wrap} {
+    flex-wrap: $wrap;
+  }
+}
+
+@each $name, $direction in $directions {
+  .flex-#{$name} {
+    flex-direction: $direction;
+  }
+}
+
+@each $name, $justify in $justifications {
+  .justify-#{$name} {
+    justify-content: $justify;
+  }
+}
+
+@each $alignment in $alignments {
+  .items-#{$alignment} {
+    align-items: $alignment;
+  }
+
+  .self-#{$alignment} {
+    align-self: $alignment;
+  }
+}
+
+@each $name, $value in size.$sizes {
+  .gap-#{$name} {
+    gap: $value;
+  }
+}
