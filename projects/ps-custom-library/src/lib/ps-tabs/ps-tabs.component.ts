@@ -14,6 +14,7 @@ export class PsTabsComponent {
     ngOnInit() {
       this.routerEvent();
     }
+    
     setActiveTabOnClick(url: string) {
       this.activeTab = this.items.filter((item:any) => {
         if(url?.includes(item.routerLink) || item?.routerLink?.includes(url)){

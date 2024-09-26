@@ -18,7 +18,8 @@ export class PsHeaderComponent {
   @Input() showHeaderNotifications?:boolean = false;
   @Input() showHeaderComments?:boolean = false;
   @Input() showHeaderMessages?:boolean = false;
-  
+  @Input() showHeaderNavigation?:boolean = false;
+  @Input() showHeaderUserDetails?:boolean = false;
   onPlatformLogoClick(event:any){
     console.log('onPlatformLogoClick emit');
     this.emitLogoClick.emit(event);

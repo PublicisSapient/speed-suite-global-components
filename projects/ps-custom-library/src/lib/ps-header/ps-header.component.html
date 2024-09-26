@@ -19,8 +19,11 @@
 					<img class="h-full" [src]="pSLogoInfo.imageUrl" [alt]="pSLogoInfo?.altText">
 				</div>
 				<div class="h-full w-px ml-3 bg-gray-700"></div>
-				<div class="h-full pl-3">
-					<img class="h-full cursor-pointer" [alt]="platformLogoInfo?.altText" [src]="platformLogoInfo?.imageUrl" (click)="onPlatformLogoClick($event)">
+				<div class="h-full pl-3 platform-logo">
+					<img class="h-full w-full cursor-pointer" [alt]="platformLogoInfo?.altText" [src]="platformLogoInfo?.imageUrl" (click)="onPlatformLogoClick($event)">
+				</div>
+				<div class="header-navigations h-full pl-3 flex items-center" *ngIf="showHeaderNavigation">
+					<ng-content select="[navigations]"></ng-content>
 				</div>
 			</div>
 			<div class="w-1/2 justify-end flex">
@@ -33,7 +36,7 @@
 				<div class="header-notifications h-full pl-3 flex items-center" *ngIf="showHeaderNotifications">
 					<ng-content select="[notifications]"></ng-content>
 				</div>
-				<div class="header-userdetails h-full pl-3">
+				<div class="header-userdetails h-full pl-3" *ngIf="showHeaderUserDetails">
 					<ng-content select="[userDetails]"></ng-content>
 				</div>
 			</div>

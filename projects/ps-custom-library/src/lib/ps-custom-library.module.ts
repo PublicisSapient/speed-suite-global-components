@@ -40,7 +40,8 @@ import { PsFooterComponent } from './ps-footer/ps-footer.component';
     PsHeaderComponent,
     PsUserProfileDetailsComponent,
     PsTabsComponent,
-    PsFooterComponent
+    PsFooterComponent,
+    ButtonModule
   ]
 })
 export class PsCustomLibraryModule { }
