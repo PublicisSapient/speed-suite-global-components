@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { PsCustomLibraryComponent } from './ps-custom-library.component';
 import { PsCardComponent } from './ps-card/ps-card.component';
 import { PsTableComponent } from './ps-table/ps-table.component';
 import { PsHeaderComponent } from './ps-header/ps-header.component';
@@ -17,7 +16,6 @@ import { PsFooterComponent } from './ps-footer/ps-footer.component';
 
 @NgModule({
   declarations: [
-    PsCustomLibraryComponent,
     PsCardComponent,
     PsTableComponent,
     PsHeaderComponent,
@@ -34,7 +32,6 @@ import { PsFooterComponent } from './ps-footer/ps-footer.component';
     TabMenuModule
   ],
   exports: [
-    PsCustomLibraryComponent,
     PsTableComponent,
     PsCardComponent,
     PsHeaderComponent,
