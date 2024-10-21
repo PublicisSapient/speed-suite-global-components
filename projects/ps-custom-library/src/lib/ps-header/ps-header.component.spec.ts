@@ -3,7 +3,7 @@ import { PsHeaderComponent } from './ps-header.component';
 import { By } from '@angular/platform-browser';
 
 
-describe('PsCustomLibraryService', () => {
+describe('PsHeaderComponent', () => {
   let component: PsHeaderComponent;
   let fixture: ComponentFixture<PsHeaderComponent>;
   
