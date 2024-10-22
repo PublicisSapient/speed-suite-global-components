@@ -2,8 +2,6 @@
  * Public API Surface of ps-custom-library
  */
 
-export * from './lib/ps-custom-library.service';
-export * from './lib/ps-custom-library.component';
 export * from './lib/ps-card/ps-card.component';
 export * from './lib/ps-table/ps-table.component';
 export * from './lib/ps-header/ps-header.component';
