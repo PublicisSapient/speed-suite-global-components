@@ -9,7 +9,7 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 export class PsUserProfileDetailsComponent {
   @Input() items:any;
   @Input() userName:any;
-  @Input() userBadgeName:any;
+  @Input() userInitials:any;
 
   constructor(private route: ActivatedRoute, private router: Router) {}
     ngOnInit() {

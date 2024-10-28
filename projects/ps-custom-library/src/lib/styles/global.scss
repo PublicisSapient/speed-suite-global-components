@@ -1,8 +1,8 @@
 @use "design-system/typography";
 // PrimeNG:
-@import '~primeicons/primeicons.css';
-@import '~primeng/resources/themes/md-light-indigo/theme.css';
-@import '~primeng/resources/primeng.min.css';
+@import 'primeicons/primeicons';
+@import 'primeng/resources/themes/md-light-indigo/theme';
+@import 'primeng/resources/primeng';
 // PrimeNG components:
 @import "primeNG/button";
 @import "primeNG/calendar";

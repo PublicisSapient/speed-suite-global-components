@@ -16,11 +16,11 @@
 					</ul>
 				</div>
 				<div class="h-full pl-3">
-					<img class="h-full" [src]="pSLogoInfo.imageUrl" [alt]="pSLogoInfo?.altText">
+					<img class="h-full" [src]="pSLogoInfo?.imageUrl" [alt]="pSLogoInfo?.altText">
 				</div>
 				<div class="h-full w-px ml-3 bg-gray-700"></div>
 				<div class="h-full pl-3 platform-logo">
-					<img class="h-full w-full cursor-pointer" [alt]="platformLogoInfo?.altText" [src]="platformLogoInfo?.imageUrl" (click)="onPlatformLogoClick($event)">
+					<p-image class="h-full" [alt]="platformLogoInfo?.altText" [src]="platformLogoInfo?.imageUrl" width="140"></p-image>
 				</div>
 				<div class="header-navigations h-full pl-3 flex items-center" *ngIf="showHeaderNavigation">
 					<ng-content select="[navigations]"></ng-content>

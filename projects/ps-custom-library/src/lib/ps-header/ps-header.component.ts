@@ -1,14 +1,15 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'lib-ps-header',
   templateUrl: './ps-header.component.html',
-  styleUrls: ['./ps-header.component.scss']
+  styleUrls: ['./ps-header.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class PsHeaderComponent {
   // @Input() cards:any
-  @Input() pSSwitchIcon:any;
-  @Input() pSLogoInfo:any;
+  @Input() pSSwitchIcon= "../assets/images/switch-platforms-icon.svg";;
+  @Input() pSLogoInfo= {"imageUrl": "../assets/images/ps-logo.svg","altText": "psLogo"};
   @Input() platformLogoInfo: any;
   @Output() emitLogoClick = new EventEmitter<any>();
   @Output() emitSwitchPlatformapplicationClick = new EventEmitter<any>();

@@ -9,6 +9,7 @@ import { CardModule } from 'primeng/card';
 import { TableModule } from 'primeng/table';
 import { TabMenuModule } from 'primeng/tabmenu';
 import { MenuModule } from 'primeng/menu';
+import { ImageModule } from 'primeng/image';
 import { PsTabsComponent } from './ps-tabs/ps-tabs.component';
 import { PsFooterComponent } from './ps-footer/ps-footer.component';
 
@@ -29,7 +30,8 @@ import { PsFooterComponent } from './ps-footer/ps-footer.component';
     CardModule,
     TableModule,
     MenuModule,
-    TabMenuModule
+    TabMenuModule,
+    ImageModule
   ],
   exports: [
     PsTableComponent,
@@ -37,8 +39,7 @@ import { PsFooterComponent } from './ps-footer/ps-footer.component';
     PsHeaderComponent,
     PsUserProfileDetailsComponent,
     PsTabsComponent,
-    PsFooterComponent,
-    ButtonModule
+    PsFooterComponent
   ]
 })
 export class PsCustomLibraryModule { }
