@@ -8,7 +8,7 @@
 					</div>
 					<ul class="absolute max-w-md list-none list-inside rounded mt-6 block bg-white border z-10 py-3 switch-dropdown w-44" [ngClass]="showSwitch && showElement? 'block':'hidden'">
 						<li class="flex flex-row bg-white cursor-pointer pb-3" *ngFor="let item of platformSwitchItems; index as i">
-							<div (click)="navigateTo(item?.event)" class="switch-item flex" [ngClass]="{'active': i === 0}">
+							<div (click)="onSwitchApplicationClick(item?.event)" class="switch-item flex" [ngClass]="{'active': i === 0}">
 								<span class="w-3/4 font-normal md:font-medium lg:font-medium pr-3">{{item?.label}}</span>
 								<span class="tick-icon w-1/4 text-right font-bold">&#10003;</span>
 							</div>
@@ -19,7 +19,7 @@
 					<img class="h-full" [src]="pSLogoInfo?.imageUrl" [alt]="pSLogoInfo?.altText">
 				</div>
 				<div class="h-full w-px ml-3 bg-gray-700"></div>
-				<div class="h-full pl-3 platform-logo" (click)="onPlatformLogoClick($event)">
+				<div class="h-full pl-3 platform-logo" (click)="onLogoClick($event)">
 					<p-image class="h-full cursor-pointer" [alt]="platformLogoInfo?.altText" [src]="platformLogoInfo?.imageUrl" [width]="platformLogoInfo?.width"></p-image>
 				</div>
 				<div class="header-navigations h-full pl-3 flex items-center" *ngIf="showHeaderNavigation">

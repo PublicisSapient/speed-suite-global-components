@@ -12,8 +12,8 @@ export class PsHeaderComponent {
   @Input() pSSwitchIcon= "../assets/images/switch-platforms-icon.svg";
   @Input() pSLogoInfo= {"imageUrl": "/assets/images/ps-logo.svg","altText": "psLogo"};
   @Input() platformLogoInfo: any;
-  @Output() emitLogoClick = new EventEmitter<any>();
-  @Output() emitSwitchPlatformapplicationClick = new EventEmitter<any>();
+  @Output() logoClick = new EventEmitter<any>();
+  @Output() switchApplicationClick = new EventEmitter<string>();
   @Input() platformSwitchItems:any;
   @Input() showElement:any;
   @Input() showSwitch:any;
@@ -22,12 +22,13 @@ export class PsHeaderComponent {
   @Input() showHeaderMessages?:boolean = false;
   @Input() showHeaderNavigation?:boolean = false;
   @Input() showHeaderUserDetails?:boolean = false;
-  onPlatformLogoClick(event:any){
-    console.log('onPlatformLogoClick emit');
-    this.emitLogoClick.emit(event);
+
+  onLogoClick(event:any):void{
+    console.log('logo click event raised from library');
+    this.logoClick.emit(event);
   }
-  navigateTo(event:string){
-    console.log('event ', event);
-    this.emitSwitchPlatformapplicationClick.emit(event);
+  onSwitchApplicationClick(event:string):void{
+    console.log('switching between application click event raised from library ', event);
+    this.switchApplicationClick.emit(event);
   }
 }
