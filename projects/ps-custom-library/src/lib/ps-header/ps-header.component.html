@@ -19,7 +19,7 @@
 					<img class="h-full" [src]="pSLogoInfo?.imageUrl" [alt]="pSLogoInfo?.altText">
 				</div>
 				<div class="h-full w-px ml-3 bg-gray-700"></div>
-				<div class="h-full pl-3 platform-logo">
+				<div class="h-full pl-3 platform-logo" (click)="onPlatformLogoClick($event)">
 					<p-image class="h-full" [alt]="platformLogoInfo?.altText" [src]="platformLogoInfo?.imageUrl" [width]="platformLogoInfo?.width"></p-image>
 				</div>
 				<div class="header-navigations h-full pl-3 flex items-center" *ngIf="showHeaderNavigation">

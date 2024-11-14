@@ -8,8 +8,9 @@ import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angu
 })
 export class PsHeaderComponent {
   // @Input() cards:any
+  
   @Input() pSSwitchIcon= "../assets/images/switch-platforms-icon.svg";
-  @Input() pSLogoInfo= {"imageUrl": "../assets/images/ps-logo.svg","altText": "psLogo"};
+  @Input() pSLogoInfo= {"imageUrl": "/assets/images/ps-logo.svg","altText": "psLogo"};
   @Input() platformLogoInfo: any;
   @Output() emitLogoClick = new EventEmitter<any>();
   @Output() emitSwitchPlatformapplicationClick = new EventEmitter<any>();
