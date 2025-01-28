@@ -9,7 +9,7 @@
 					<ul class="absolute max-w-md list-none list-inside rounded mt-4 block bg-white border z-10 pt-3 pl-2 pr-4 switch-dropdown w-44" [ngClass]="showSwitch && showElement? 'block':'hidden'">
 						<li class="bg-white cursor-pointer pb-3" *ngFor="let item of platformSwitchItems; index as i">
 							<div (click)="navigateTo(item?.event)" class="switch-item flex justify-between items-center" [ngClass]="{'active': i === 0}">
-								<span class="w-3/4 font-medium pr-3 text-gray-550">{{item?.label}}</span>
+								<span class="w-3/4 font-medium pr-3 text-gray-700">{{item?.label}}</span>
 								<span class="tick-icon font-bold pi pi-check"></span>
 							</div>
 						</li>
