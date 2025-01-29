@@ -7,10 +7,10 @@
 						<img alt="switch-icon" class="h-full cursor-pointer" [src]="pSSwitchIcon">
 					</div>
 					<ul class="absolute max-w-md list-none list-inside rounded mt-4 block bg-white border z-10 pt-3 pl-2 pr-4 switch-dropdown w-44" [ngClass]="showSwitch && showElement? 'block':'hidden'">
-						<li class="flex flex-row bg-white cursor-pointer pb-3" *ngFor="let item of platformSwitchItems; index as i">
+						<li class="bg-white cursor-pointer pb-3" *ngFor="let item of platformSwitchItems; index as i">
 							<div (click)="onSwitchApplicationClick(item?.event)" class="switch-item flex justify-between items-center" [ngClass]="{'active': i === 0}">
-								<span class="w-3/4 font-medium pr-3 text-gray-70">{{item?.label}}</span>
-								<span class="tick-icon font-bold pi pi-check">&#10003;</span>
+								<span class="w-3/4 font-medium pr-3 text-gray-700">{{item?.label}}</span>
+								<span class="tick-icon font-bold pi pi-check"></span>
 							</div>
 						</li>
 					</ul>
