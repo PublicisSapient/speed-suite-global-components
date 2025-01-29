@@ -14,7 +14,7 @@
         height: 0;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
-        border-top: 5px solid grey;//color.$grey;
+        border-top: 5px solid $gray-700;
         bottom: -1px;
         transform: translate(-50%);
         left: 50%;
@@ -29,7 +29,7 @@
         }
       }
     }
-    
+
     &.show-switch{
       .switch-app-icon{
         &::before{
@@ -48,9 +48,12 @@
             display: block;
           }
           span{
-            color: blue;// color.$primary;
+            color: $primary;
           }
         }
+      }
+      & > li {
+        list-style: none;
       }
     }
   }
@@ -58,10 +61,10 @@
     .switch-apps{
       .switch-app-icon{
         &::before{
-          bottom: -14px;
-          border-left-width: 8px;
-          border-right-width: 8px;
-          border-top-width: 8px;
+          bottom: -8px;
+          border-left-width: 4px;
+          border-right-width: 4px;
+          border-top-width: 4px;
         }
         ul{
           margin-top: 5px;
@@ -70,5 +73,5 @@
     }
   }
   .border{
-    border: 1px solid #E5EEFF;
+    border: 1px solid $elevation-lvl-1;
   }
