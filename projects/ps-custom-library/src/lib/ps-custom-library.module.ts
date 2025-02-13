@@ -12,6 +12,7 @@ import { MenuModule } from 'primeng/menu';
 import { ImageModule } from 'primeng/image';
 import { PsTabsComponent } from './ps-tabs/ps-tabs.component';
 import { PsFooterComponent } from './ps-footer/ps-footer.component';
+import { OutsideClickDirective } from './directives/outside-click.directive';
 
 
 
@@ -22,7 +23,8 @@ import { PsFooterComponent } from './ps-footer/ps-footer.component';
     PsHeaderComponent,
     PsTabsComponent,
     PsUserProfileDetailsComponent,
-    PsFooterComponent
+    PsFooterComponent,
+    OutsideClickDirective
   ],
   imports: [
     CommonModule,
