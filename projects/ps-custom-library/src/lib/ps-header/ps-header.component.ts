@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angu
 })
 export class PsHeaderComponent {
   // @Input() cards:any
-  
+
   @Input() pSSwitchIcon= "../assets/images/switch-platforms-icon.svg";
   @Input() pSLogoInfo= {"imageUrl": "/assets/images/ps-logo.svg","altText": "psLogo"};
   @Input() platformLogoInfo: any;
@@ -24,11 +24,18 @@ export class PsHeaderComponent {
   @Input() showHeaderUserDetails?:boolean = false;
 
   onLogoClick(event:any):void{
-    console.log('logo click event raised from library');
     this.logoClick.emit(event);
   }
   onSwitchApplicationClick(event:string):void{
-    console.log('switching between application click event raised from library ', event);
     this.switchApplicationClick.emit(event);
+  }
+
+  handleOutsideClick() {
+    this.showSwitch = false;
+  }
+
+  toggleSwitchDropdown(event: Event) {
+    event.stopPropagation();
+    this.showSwitch = !this.showSwitch;
   }
 }
